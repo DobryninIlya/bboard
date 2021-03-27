@@ -1,4 +1,9 @@
-Django==2.1.3
-django-simple-captcha
+django
 django-bootstrap4
-Pillow
+social-auth-app-django
+pillow
+easy-thumbnails
+django-cleanup
+django-simple-captcha
+djangorestframework
+django-cors-headers
