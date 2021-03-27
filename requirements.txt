@@ -8,3 +8,4 @@ django-simple-captcha
 djangorestframework
 django-cors-headers
 whitenoise==4.1.2
+gunicorn==0.17.2
