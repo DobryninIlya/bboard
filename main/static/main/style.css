@@ -1,0 +1,29 @@
+header h1 {
+     /*background: url("headbg.svg") center / auto 100% no-repeat;*/
+    /*background: url("logo.svg") left / auto 100% no-repeat, url("logo.svg") right / auto 100% no-repeat;*/
+}
+
+.root {
+    font-size: larger;
+}
+
+img.main-image {
+    max-width: 300px;
+    max-height: 300px;
+    height: auto;
+    width: auto;
+
+}
+
+img.additional-image {
+    width: 180px;
+}
+div.row {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+#headimg {
+    width: 100%;
+}
