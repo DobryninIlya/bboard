@@ -143,7 +143,6 @@ AUTH_USER_MODEL = 'main.AdvUser'
 # DEFAULT_FROM_EMAIL = 'admin@bboard.ru'
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.vk.VKOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
