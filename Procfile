@@ -1,2 +1,1 @@
-web: gunicorn botkaiD.wsgi --log-file -
-clock: python shed.py
+web: gunicorn bboard.wsgi --log-file -
