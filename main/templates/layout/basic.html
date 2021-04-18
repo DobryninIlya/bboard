@@ -16,7 +16,7 @@
 {#            <h1 class="display-9 text-right">Подавать объявления просто!</h1>#}
         </header>
         <div class="row">
-            <ul class="col nav justify-content-end border">
+            <ul class="col nav justify-content-end">
                 <li class="nav-item"><a class="nav-link" href="{% url 'main:register' %}">
                 Регистрация</a></li>
                 {% if user.is_authenticated %}
@@ -42,7 +42,7 @@
             </ul>
         </div>
         <div class="row">
-            <nav class="col-md-auto nav flex-column border">
+            <nav class="col-md-auto nav flex-column">
                 <a class="nav-link root" href="{% url 'main:index' %}">Главная</a>
                 {% for rubric in rubrics %}
                 {% ifchanged rubric.super_rubric.pk %}
