@@ -17,8 +17,10 @@
         </header>
         <div class="row">
             <ul class="col nav justify-content-end">
+                {% if not user.is_authenticated %}
                 <li class="nav-item"><a class="nav-link" href="{% url 'main:register' %}">
                 Регистрация</a></li>
+                {% endif %}
                 {% if user.is_authenticated %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown"
