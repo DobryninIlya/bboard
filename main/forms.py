@@ -21,7 +21,7 @@ class RegisterUserForm(forms.ModelForm):
     password2 = forms.CharField(label='Пароль (повторно)', widget=forms.PasswordInput,
                 help_text='Введите тот же самый пароль еще раз для проверки')
 
-    def clean_password1(self):
+    def clean_password(self):
         password1 = self.cleaned_data['password1']
         if password1:
             password_validation.validate_password(password1)
@@ -39,16 +39,15 @@ class RegisterUserForm(forms.ModelForm):
     def save(self, commit=True):
         user = super().save(commit=False)
         user.set_password(self.cleaned_data['password1'])
-        user.is_active = False
-        user.is_activated = False
+        user.is_active = True
+        user.is_activated = True
         if commit:
             user.save()
         return user
 
     class Meta:
         model = AdvUser
-        fields = ('username', 'email', 'password1', 'password2', 'first_name', 'last_name',
-                  )
+        fields = ('username', 'email', 'password1', 'password2', 'first_name', 'last_name')
 
 class SubRubricForm(forms.ModelForm):
     super_rubric = forms.ModelChoiceField(queryset=SuperRubric.objects.all(),
